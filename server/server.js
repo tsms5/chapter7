@@ -7,6 +7,14 @@ var { User } = require('./models/user');
 
 var app = express();
 
+const todos = [{
+  text: 'first todo'
+}, {
+  text: 'second todo'
+}];
+
+Todo.insertMany(todos);
+
 app.use(bodyParser.json());
 
 app.post('/todos', (req, res) => {
